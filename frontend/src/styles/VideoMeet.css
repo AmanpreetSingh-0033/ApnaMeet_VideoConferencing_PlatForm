@@ -1,0 +1,358 @@
+.videomeet-goback-btn {
+  position: fixed !important;
+  top: 24px !important;
+  right: 32px !important;
+  z-index: 100 !important;
+}
+
+@media (max-width: 600px) {
+  .videomeet-content-wrapper {
+    padding-top: 60px; /* Add space for the button */
+  }
+  .videomeet-goback-btn {
+    top: 12px !important;
+    right: 12px !important;
+    font-size: 0.98rem !important;
+    padding: 6px 16px !important;
+  }
+}
+.videomeet-root {
+  min-height: 100vh;
+  width: 100vw;
+  background: url("../assets/background.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.videomeet-content-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.videomeet-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #7f53ac22;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 450px;
+  max-width: 550px;
+  width: 100%;
+  margin: 6rem 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.videomeet-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #7f53ac;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.videomeet-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.videomeet-input .MuiOutlinedInput-root {
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.videomeet-btn {
+  background: linear-gradient(90deg, #7f53ac 40%, #647dee 100%) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 1.08rem !important;
+  border-radius: 18px !important;
+  text-transform: none !important;
+  box-shadow: 0 4px 18px #7f53ac33 !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  transition: all 0.2s !important;
+}
+.videomeet-btn:hover {
+  background: linear-gradient(90deg, #647dee 0%, #7f53ac 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 32px #647dee55 !important;
+}
+
+.videomeet-video-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.videomeet-video {
+  width: 400px;
+  height: 300px;
+  max-width: 95vw;
+  background: #000;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #7f53ac33;
+  margin-bottom: 0.7rem;
+  object-fit: cover;
+}
+
+.videomeet-warning {
+  color: #d32f2f;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.videomeet-warning.orange {
+  color: orange;
+}
+
+@media (max-width: 900px) {
+  .videomeet-content-wrapper {
+    flex-direction: column;
+    padding: 2vw 0;
+    min-height: unset;
+    height: auto;
+  }
+  .videomeet-card {
+    min-width: 70vw;
+    max-width: 70vw;
+    padding: 1.5rem 0.7rem;
+    margin: 6rem 0.2rem;
+  }
+  .videomeet-video {
+    width: 90vw;
+    max-width: 380px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .videomeet-content-wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+  .videomeet-card {
+    min-width: 65;
+    max-width: 65vw;
+    padding: 1.2rem 0.3rem;
+    margin: 6rem 0.2rem;
+  }
+  .videomeet-title {
+    font-size: 1.05rem;
+  }
+  .videomeet-video {
+    width: 98vw;
+    max-width: 220px;
+    height: 140px;
+  }
+}
+
+/* //////////////////////////////// */
+
+.video-meet-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  scrollbar-width: none !important;
+}
+
+/* Lobby View */
+.lobby-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.lobby-input {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.lobby-video {
+  width: 320px;
+  height: 240px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Conference View */
+.conference-container {
+  height: 100vh;
+  position: relative;
+  background-color: #121212;
+  padding: 1rem;
+  color: white;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  scrollbar-width: none !important;
+}
+.remote-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+  padding: 1rem;
+}
+.remote-video-wrapper video {
+  width: 100%;
+  border-radius: 10px;
+  background: black;
+}
+
+/* Local video in bottom-left */
+.local-video {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Controls bar */
+.controls-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+@media (max-width: 915px) {
+  .controls-bar {
+    width: 15rem;
+    gap: 0.1rem;
+  }
+  .chat-modal {
+    width: 265px;
+  }
+}
+
+@media (max-width: 809px) {
+  .controls-bar {
+    transform: translateX(-50%);
+  }
+}
+
+/* Chat modal */
+.chat-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background: #fff;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 15;
+}
+.chat-header {
+  background-color: #673ab7;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+}
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #f0f0f0;
+}
+.chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 1rem;
+  background-color: #fff;
+}
+.chat-message {
+  margin-bottom: 1rem;
+  color: #121212;
+}
+
+@media (max-width: 915px) {
+  .controls-bar {
+    width: 15rem;
+    gap: 0.1rem;
+  }
+  .chat-modal {
+    width: 265px;
+  }
+}
+
+@media (max-width: 769px) {
+  .controls-bar {
+    transform: translateX(-66%);
+    width: 7rem;
+    gap: 0rem;
+    display: flow !important;
+  }
+}
+
+@media (max-width: 597px) {
+  .controls-bar {
+    transform: translateX(-19%);
+    width: 14rem;
+    gap: 0rem;
+    display: flex !important;
+  }
+  .chat-modal {
+    width: 215px;
+    height: 89%;
+  }
+}
+
+@media (max-width: 488px) {
+  .controls-bar {
+    transform: translateX(20%);
+    width: 7rem;
+    gap: 0rem;
+    display: flow !important;
+  }
+  .chat-modal {
+    width: 258px;
+    height: 75%;
+  }
+}
+
+.remote-video-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.remote-username-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}

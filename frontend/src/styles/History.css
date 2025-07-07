@@ -1,0 +1,114 @@
+/* Root container */
+.history-root {
+  min-height: 100vh;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header section */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0 12px;
+  flex-wrap: wrap;
+}
+
+.history-brand {
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  background: linear-gradient(90deg, #7f53ac, #647dee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.history-brand:hover {
+  filter: drop-shadow(0 2px 8px #7f53ac99);
+}
+
+.history-back-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #7f53ac;
+  border: 2px solid #7f53ac;
+  font-weight: bold;
+  border-radius: 18px;
+  text-transform: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(127, 83, 172, 0.25);
+}
+
+.history-back-btn:hover {
+  background: linear-gradient(90deg, #647dee, #7f53ac);
+  color: white;
+  border-color: #647dee;
+  box-shadow: 0 4px 12px rgba(100, 125, 238, 0.4);
+}
+
+/* Card styling */
+.history-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.history-card {
+  background: linear-gradient(120deg, #1f1f1f, #2a2a2a);
+  border: 2px solid #7f53ac55;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.history-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px #7f53ac88;
+  border-color: #7f53ac;
+}
+
+.history-code {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.history-date {
+  font-size: 0.95rem;
+  color: #bbbbbb;
+}
+
+/* Empty message */
+.history-empty {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .history-brand {
+    font-size: 1.8rem;
+  }
+
+  .history-back-btn {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}

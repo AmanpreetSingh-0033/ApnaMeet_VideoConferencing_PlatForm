@@ -1,0 +1,114 @@
+.footer {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(6px);
+  border-top: 1.5px solid rgba(127, 83, 172, 0.12);
+  box-shadow: 0 -2px 16px #7f53ac11;
+  padding: 2rem 0 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-center {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.footer-text {
+  color: #7f53ac;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.footer-links-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: #647dee;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.18s, text-shadow 0.18s, background 0.18s;
+  padding: 0 0.3rem;
+  border-radius: 6px;
+}
+
+.footer-link:hover {
+  color: #7f53ac;
+  text-shadow: 0 2px 12px #7f53ac33;
+  background: rgba(127, 83, 172, 0.07);
+}
+
+.footer-dot {
+  color: #bcb8d8;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.2rem;
+  justify-content: center;
+}
+
+.footer-social-link {
+  color: #7f53ac;
+  background: rgba(127, 83, 172, 0.07);
+  border-radius: 50%;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  font-size: 1.2rem;
+}
+
+.footer-social-link:hover {
+  background: linear-gradient(90deg, #7f53ac 40%, #647dee 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px #7f53ac33;
+}
+
+@media (max-width: 700px) {
+  .footer-center {
+    max-width: 98vw;
+    gap: 0.5rem;
+  }
+  .footer-logo {
+    font-size: 1.15rem;
+  }
+  .footer-text,
+  .footer-link {
+    font-size: 0.95rem;
+  }
+  .footer-links-row {
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+  }
+  .footer-social {
+    gap: 0.7rem;
+  }
+}
