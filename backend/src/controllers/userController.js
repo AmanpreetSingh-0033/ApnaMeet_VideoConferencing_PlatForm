@@ -38,7 +38,7 @@ const register = async (req, res) => {
       .json({ message: "User registered successfully" });
   } catch (error) {
     console.error("Error in register:", error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "Internal server error => error in register the user" });
   }
 };
 
@@ -79,7 +79,7 @@ const login = async (req, res) => {
     }
   } catch (error) {
     console.error("Error in login:", error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "Internal server error : error in login" });
   }
 };
 
@@ -90,7 +90,7 @@ const getUserHistory = async (req, res) => {
     const meetings = await Meeting.find({ user_id: user.username });
     res.json(meetings);
   } catch (e) {
-    res.json({ message: `Something went wrong ${e}` });
+    res.json({ message: `Something went wrong ${e} => error in getUserHistory` });
   }
 };
 
@@ -108,7 +108,7 @@ const addToHistory = async (req, res) => {
 
     res.status(httpStatus.CREATED).json({ message: "Added code to history" });
   } catch (e) {
-    res.json({ message: `Something went wrong ${e}` });
+    res.json({ message: `Something went wrong ${e} error in addToHistiry` });
   }
 };
 
@@ -188,7 +188,7 @@ export const resetPassword = async (req, res) => {
     res.json({ message: "Password reset successful" });
   } catch (error) {
     console.error("Error resetting password:", error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "Internal server error : error in reSetPassword" });
   }
 };
 
