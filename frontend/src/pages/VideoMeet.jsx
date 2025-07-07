@@ -17,7 +17,6 @@ import server from "../environment";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
-
 const server_url = server;
 
 var connections = {};
@@ -708,4 +707,3 @@ export default function VideoMeetComponent() {
     </div>
   );
 }
-
