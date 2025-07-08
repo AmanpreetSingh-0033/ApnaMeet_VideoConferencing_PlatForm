@@ -25,10 +25,10 @@ const io = connectToSocket(server);
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // ✅ local frontend
-      "https://apnameet-videoconferencing-platform-w7js.onrender.com", // ✅ deployed frontend
+      "http://localhost:5173", // for local frontend development
+      "https://apnameet-videoconferencing-platform-w7js.onrender.com", // ✅ your deployed frontend
     ],
-    credentials: true, // ✅ keep if using cookies (optional otherwise)
+    // credentials: true, // keep it only if using cookies (optional for JWT)
   })
 );
 
