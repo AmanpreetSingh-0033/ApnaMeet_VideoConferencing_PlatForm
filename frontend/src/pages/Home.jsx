@@ -17,6 +17,8 @@ import ShareIcon from "@mui/icons-material/Share";
 function HomeComponent() {
   let navigate = useNavigate();
 
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   useEffect(() => {
     let token = localStorage.getItem("token");
     if (!token) {

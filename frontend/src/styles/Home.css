@@ -7,8 +7,9 @@
   flex-direction: column;
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
-  scrollbar-width: none;
   -ms-overflow-style: none;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .home-root::-webkit-scrollbar {
@@ -331,6 +332,13 @@
     font-size: 1rem;
   }
 
+  .home-nav-btn {
+    width: 0.7rem;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    gap: 2rem;
+  }
+
   .home-logo {
     font-size: 1.8rem;
   }
@@ -402,6 +410,7 @@
   }
 
   .home-nav-right {
+    scale: 0.8;
     justify-content: center;
   }
 

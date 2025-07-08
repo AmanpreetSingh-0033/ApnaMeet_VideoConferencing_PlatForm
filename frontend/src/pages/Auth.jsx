@@ -10,7 +10,7 @@ import Snackbar from "@mui/material/Snackbar";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 import "../styles/Auth.css";
-import Footer from "./Footer";
+import Footer from "./Footer";  
 import "../styles/Footer.css";
 
 import { AuthContext } from "../contexts/AuthContext";
@@ -18,7 +18,7 @@ import { AuthContext } from "../contexts/AuthContext";
 export default function Auth() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [name, setName] = useState(""); 
   const [formState, setFormState] = useState(0);
   const [error, setError] = useState("");
   const [open, setOpen] = useState(false);

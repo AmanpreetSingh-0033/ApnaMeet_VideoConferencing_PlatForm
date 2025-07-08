@@ -5,12 +5,14 @@ import { HttpStatusCode } from "axios";
 import server from "../environment";
 import client from "../utils/client";
 export const AuthContext = createContext();
-// import { useState } from "react";
+
 
 // const client = axios.create({
 //   baseURL: "http://localhost:8000/apnaMeet/api/v1/users",
 //   // withCredentials: true,
 // });
+
+
 
 export const AuthProvider = ({ children }) => {
   const authContext = useContext(AuthContext);
@@ -22,6 +24,8 @@ export const AuthProvider = ({ children }) => {
 
   const handleRegister = async (name, username, password) => {
     try {
+      console.log("I am handle register")
+      // console.log(client)
       let req = await client.post("/register", {
         name,
         username,
@@ -118,6 +122,9 @@ export const AuthProvider = ({ children }) => {
   ///////////// Reset Password /////////////
   const resetPassword = async (otp, newPassword) => {
     try {
+      console.log("resetEmail is " , resetEmail);
+      console.log("otp is " , otp);
+      console.log("newPass is : " , newPassword);
       const res = await client.post("/reset-password", {
         email: resetEmail,
         otp,
@@ -126,6 +133,7 @@ export const AuthProvider = ({ children }) => {
       setResetEmail(""); // clear after use
       return res.data;
     } catch (err) {
+      console.log("Error in reset password block")
       throw err;
     }
   };
