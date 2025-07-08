@@ -58,7 +58,7 @@ const start = async () => {
   }
 
   // Start the server after DB connection
-  server.listen(app.get("port"), () => {
+  server.listen(app.get("port"), "0.0.0.0", () => {
     console.log(`Server running at port: ${app.get("port")}`);
   });
 };
